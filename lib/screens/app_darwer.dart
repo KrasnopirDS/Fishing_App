@@ -9,15 +9,14 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: ColorsPalette.lightGreen, // Using lightGreen from ColorsPalette
+      backgroundColor: ColorsPalette.lightGreen,
       child: Column(
         children: [
-          // Drawer Header
           Container(
             height: 120,
             alignment: Alignment.bottomLeft,
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            color: ColorsPalette.basicGreen, // Using basicGreen for header background
+            color: ColorsPalette.basicGreen,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -25,15 +24,15 @@ class AppDrawer extends StatelessWidget {
                 const Text(
                   'Fishing mesh',
                   style: TextStyle(
-                    color: ColorsPalette.blackGreen, // Using blackGreen for text
+                    color: ColorsPalette.blackGreen,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.chevron_left, color: ColorsPalette.blackGreen, size: 30), // Using blackGreen for icon
+                  icon: const Icon(Icons.chevron_left, color: ColorsPalette.blackGreen, size: 30),
                   onPressed: () {
-                    Navigator.of(context).pop(); // Close the drawer
+                    Navigator.of(context).pop();
                   },
                 ),
               ],
@@ -41,11 +40,11 @@ class AppDrawer extends StatelessWidget {
           ),
           // Drawer Menu Items
           ListTile(
-            leading: const Icon(Icons.menu_book, color: ColorsPalette.oceanGreen, size: 30), // Using oceanGreen for icons
+            leading: const Icon(Icons.menu_book, color: ColorsPalette.oceanGreen, size: 30),
             title: const Text(
               'Fishing Log',
               style: TextStyle(
-                color: ColorsPalette.blackGreen, // Using blackGreen for text
+                color: ColorsPalette.blackGreen,
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
               ),

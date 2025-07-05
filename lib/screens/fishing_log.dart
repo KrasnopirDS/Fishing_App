@@ -2,7 +2,7 @@ import 'package:fishing_app/screens/new_location.dart';
 import 'package:flutter/material.dart';
 import 'package:fishing_app/styles/widget_style.dart';
 import 'package:fishing_app/screens/app_darwer.dart';
-import 'package:fishing_app/screens/catches.dart'; // Додано імпорт
+import 'package:fishing_app/screens/catches.dart';
 
 class FishingLog extends StatelessWidget {
   const FishingLog({super.key});
@@ -32,7 +32,6 @@ class FishingLog extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(8.0),
         children: const [
-          // Обгортаємо FishingLogEntry у GestureDetector
           FishingLogEntry(
             title: 'Lucky Day',
             date: '1 may 2025',
@@ -51,18 +50,14 @@ class FishingLog extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // <--- Змінено тут: Використовуємо showDialog для відображення картки
           showDialog(
             context: context,
             builder: (BuildContext context) {
               return Dialog(
-                // Shape робить кути закругленими, як на скріншоті
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-                // Clip the content to the shape
                 clipBehavior: Clip.antiAlias,
-                // NewLocationScreen буде вмістом діалогу
                 child: NewLocation(),
               );
             },
@@ -91,14 +86,13 @@ class FishingLogEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector( // <--- Додано GestureDetector тут
+    return GestureDetector(
       onTap: () {
-        // Переходимо на CatchesScreen при натисканні
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => CatchesScreen(
-              fishingLogTitle: title, // Передаємо заголовок (Lucky Day)
-              fishingLogDate: date,   // Передаємо дату (1 may 2025)
+              fishingLogTitle: title,
+              fishingLogDate: date,
             ),
           ),
         );

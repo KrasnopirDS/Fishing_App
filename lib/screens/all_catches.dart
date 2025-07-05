@@ -31,21 +31,6 @@ class AllCatchesScreen extends StatelessWidget {
               'Catches',
               style: AppTheme.theme.appBarTheme.titleTextStyle,
             ),
-            // Text(
-            //   fishingLogTitle,
-            //   style: const TextStyle(
-            //     fontSize: 18,
-            //     fontWeight: FontWeight.bold,
-            //     color: ColorsPalette.blackGreen,
-            //   ),
-            // ),
-            // Text(
-            //   fishingLogDate,
-            //   style: const TextStyle(
-            //     fontSize: 14,
-            //     color: ColorsPalette.blackGreen,
-            //   ),
-            // ),
           ],
         ),
         centerTitle: true,
@@ -54,7 +39,6 @@ class AllCatchesScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(8.0),
         children: [
-          // Обгортаємо CatchEntry у GestureDetector
           GestureDetector(
             onTap: () {
               showDialog(
@@ -65,8 +49,8 @@ class AllCatchesScreen extends StatelessWidget {
                     length: '15',
                     weight: '150',
                     bait: 'Worm',
-                    time: '1 may 2025\n7:20', // Передаємо дату і час
-                    note: 'Caught near the old oak tree. It was a sunny morning. The fish was quite active.', // Приклад нотатки
+                    time: '1 may 2025\n7:20',
+                    note: 'Caught near the old oak tree. It was a sunny morning. The fish was quite active.',
                   );
                 },
               );
@@ -89,7 +73,7 @@ class AllCatchesScreen extends StatelessWidget {
                     length: '19',
                     weight: '350',
                     bait: 'Spinner',
-                    time: '1 may 2025\n7:36', // Передаємо дату і час
+                    time: '1 may 2025\n7:36',
                     note: 'Fought hard, great catch! Used a small spinnerbait in the reeds.',
                   );
                 },
@@ -106,23 +90,6 @@ class AllCatchesScreen extends StatelessWidget {
       ),
       floatingActionButton: Stack(
         children: <Widget>[
-          // Align(
-          //   alignment: Alignment.bottomLeft,
-          //   child: Padding(
-          //     padding: const EdgeInsets.only(left: 30.0),
-          //     child: FloatingActionButton(
-          //       heroTag: "backBtn",
-          //       onPressed: () {
-          //         Navigator.of(context).pop();
-          //       },
-          //       backgroundColor: WidgetStyles.mediumGreenEntry,
-          //       shape: RoundedRectangleBorder(
-          //         borderRadius: WidgetStyles.fabDecoration.borderRadius as BorderRadius,
-          //       ),
-          //       child: const Icon(Icons.arrow_back_ios_new, color: WidgetStyles.blackColor, size: 30),
-          //     ),
-          //   ),
-          // ),
           Align(
             alignment: Alignment.bottomRight,
             child: FloatingActionButton(
@@ -154,8 +121,7 @@ class AllCatchesScreen extends StatelessWidget {
   }
 }
 
-// CatchEntry тепер обгорнутий у GestureDetector у батьківському віджеті
-// Тому його власний GestureDetector більше не потрібен тут.
+
 class CatchEntry extends StatelessWidget {
   final String species;
   final String weight;

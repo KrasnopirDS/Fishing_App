@@ -1,6 +1,5 @@
-// lib/screens/catch_details_screen.dart
 import 'package:flutter/material.dart';
-import 'package:fishing_app/styles/widget_style.dart'; // Імпортуйте ваші стилі
+import 'package:fishing_app/styles/widget_style.dart';
 
 class CatchDetailsScreen extends StatelessWidget {
   final String species;
@@ -8,7 +7,7 @@ class CatchDetailsScreen extends StatelessWidget {
   final String weight;
   final String bait;
   final String time;
-  final String note; // Додамо поле для нотаток, якщо воно буде передаватися
+  final String note;
 
   const CatchDetailsScreen({
     super.key,
@@ -17,13 +16,13 @@ class CatchDetailsScreen extends StatelessWidget {
     required this.weight,
     required this.bait,
     required this.time,
-    this.note = 'No notes available', // За замовчуванням, якщо нотаток немає
+    this.note = 'No notes available',
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: MediaQuery.of(context).size.height * 0.1), // Відступи з боків та зверху/знизу
+      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: MediaQuery.of(context).size.height * 0.1),
       color: ColorsPalette.lightGreen,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
@@ -38,23 +37,23 @@ class CatchDetailsScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  icon: const Icon(Icons.arrow_back_ios_new, color: ColorsPalette.blackGreen, size: 30), // Кнопка повернення "назад"
+                  icon: const Icon(Icons.arrow_back_ios_new, color: ColorsPalette.blackGreen, size: 30),
                   onPressed: () {
-                    Navigator.of(context).pop(); // Закриває діалог
+                    Navigator.of(context).pop();
                   },
                 ),
               ),
               const SizedBox(height: 10),
               Center(
                 child: Container(
-                  width: 250, // Розмір іконки риби
+                  width: 250,
                   height: 100,
                   decoration: BoxDecoration(
-                    color: ColorsPalette.basicGreen, // Тимчасовий колір для фону риби
+                    color: ColorsPalette.basicGreen,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Image.asset("assets/img/app_logo.png"), // Іконка риби
+                    child: Image.asset("assets/img/app_logo.png"),
                   ),
                 ),
               ),
@@ -69,7 +68,7 @@ class CatchDetailsScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.ballot_outlined, color: ColorsPalette.blackGreen, size: 24), // Іконка риби
+                            const Icon(Icons.ballot_outlined, color: ColorsPalette.blackGreen, size: 24),
                             const SizedBox(width: 10),
                             Text(species, style: const TextStyle(fontSize: 16, color: ColorsPalette.blackGreen, fontWeight: FontWeight.w600)),
                           ],
@@ -77,7 +76,7 @@ class CatchDetailsScreen extends StatelessWidget {
                         const SizedBox(height: 10),
                         Row(
                           children: [
-                            const Icon(Icons.straighten, color: ColorsPalette.blackGreen, size: 24), // Іконка лінійки
+                            const Icon(Icons.straighten, color: ColorsPalette.blackGreen, size: 24),
                             const SizedBox(width: 10),
                             Text('$length cm', style: const TextStyle(fontSize: 16, color: ColorsPalette.blackGreen, fontWeight: FontWeight.w600)),
                           ],
@@ -85,7 +84,7 @@ class CatchDetailsScreen extends StatelessWidget {
                         const SizedBox(height: 10),
                         Row(
                           children: [
-                            const Icon(Icons.balance, color: ColorsPalette.blackGreen, size: 24), // Іконка ваги
+                            const Icon(Icons.balance, color: ColorsPalette.blackGreen, size: 24),
                             const SizedBox(width: 10),
                             Text('$weight g', style: const TextStyle(fontSize: 16, color: ColorsPalette.blackGreen, fontWeight: FontWeight.w600)),
                           ],
@@ -93,7 +92,7 @@ class CatchDetailsScreen extends StatelessWidget {
                         const SizedBox(height: 10),
                         Row(
                           children: [
-                            const Icon(Icons.phishing, color: ColorsPalette.blackGreen, size: 24), // Іконка гачка
+                            const Icon(Icons.phishing, color: ColorsPalette.blackGreen, size: 24),
                             const SizedBox(width: 10),
                             Text(bait, style: const TextStyle(fontSize: 16, color: ColorsPalette.blackGreen, fontWeight: FontWeight.w600)),
                           ],
@@ -101,7 +100,7 @@ class CatchDetailsScreen extends StatelessWidget {
                         const SizedBox(height: 10),
                         Row(
                           children: [
-                            const Icon(Icons.calendar_today, color: ColorsPalette.blackGreen, size: 24), // Іконка календаря
+                            const Icon(Icons.calendar_today, color: ColorsPalette.blackGreen, size: 24),
                             const SizedBox(width: 10),
                             Text(time, style: const TextStyle(fontSize: 16, color: ColorsPalette.blackGreen, fontWeight: FontWeight.w600)),
                           ],
@@ -136,13 +135,13 @@ class CatchDetailsScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Center(
                 child: Container(
-                  height: 150, // Розмір для placeholder карти
+                  height: 150,
                   decoration: BoxDecoration(
                     color: ColorsPalette.basicGreen,
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: const Center(
-                    child: Icon(Icons.map, color: ColorsPalette.blackGreen, size: 80), // Іконка карти
+                    child: Icon(Icons.map, color: ColorsPalette.blackGreen, size: 80),
                   ),
                 ),
               ),

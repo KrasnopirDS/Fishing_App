@@ -29,7 +29,6 @@ class LocationDetailScreen extends StatelessWidget {
                 color: ColorsPalette.blackGreen,
               ),
             ),
-            // Тут ви можете додати більше деталей про локацію, таких як карта, опис, фотографії тощо.
           ],
         ),
       ),

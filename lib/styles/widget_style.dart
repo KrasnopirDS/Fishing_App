@@ -11,29 +11,29 @@ class ColorsPalette {
 }
 
 class WidgetStyles {
-  // Colors - now referencing ColorsPalette
-  static const Color lightGreenBackground = ColorsPalette.lightGreen;
-  static const Color mediumGreenEntry = ColorsPalette.basicGreen; // Using basicGreen for entries
-  static const Color darkerGreenFAB = ColorsPalette.darkGreen; // Using darkGreen for FAB
-  static const Color blackColor = Colors.black; // Keep standard black if needed
-  static const Color black54Color = Colors.black54; // Keep standard black54 if needed
-  static const Color headerGreen = ColorsPalette.basicGreen; // New color for drawer header
 
-  // Text Styles
+  static const Color lightGreenBackground = ColorsPalette.lightGreen;
+  static const Color mediumGreenEntry = ColorsPalette.basicGreen;
+  static const Color darkerGreenFAB = ColorsPalette.darkGreen;
+  static const Color blackColor = Colors.black;
+  static const Color black54Color = Colors.black54;
+  static const Color headerGreen = ColorsPalette.basicGreen;
+
+
   static const TextStyle appBarTitleStyle = TextStyle(
-    color: ColorsPalette.blackGreen, // Or use ColorsPalette.blackGreen if you want that specific black
+    color: ColorsPalette.blackGreen,
     fontWeight: FontWeight.bold,
   );
 
   static const TextStyle entryTitleStyle = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
-    color: ColorsPalette.blackGreen, // Or use ColorsPalette.blackGreen
+    color: ColorsPalette.blackGreen,
   );
 
   static const TextStyle entryDateStyle = TextStyle(
     fontSize: 14,
-    color: ColorsPalette.blackGreen, // Or use a shade of ColorsPalette.blackGreen
+    color: ColorsPalette.blackGreen,
   );
 
   // Box Decorations
@@ -49,22 +49,17 @@ class WidgetStyles {
 
   // Icon Placeholder Styles (for the fishing icon)
   static BoxDecoration fishingIconContainerDecoration = BoxDecoration(
-    color: Colors.blue, // Placeholder color, adjust if you want a color from palette
+    color: Colors.blue,
     borderRadius: BorderRadius.circular(10.0),
-    // If you have an image asset, you'd add it here:
-    // image: const DecorationImage(
-    //   image: AssetImage('assets/fishing_icon.png'),
-    //   fit: BoxFit.cover,
-    // ),
   );
 
   static BoxDecoration fishingIconTopLeftDecoration = BoxDecoration(
-    color: Colors.yellow, // Placeholder color, adjust if you want a color from palette
+    color: Colors.yellow,
     borderRadius: BorderRadius.circular(5.0),
   );
 
   static BoxDecoration fishingIconBottomRightDecoration = BoxDecoration(
-    color: Colors.blueAccent, // Placeholder color, adjust if you want a color from palette
+    color: Colors.blueAccent,
     borderRadius: BorderRadius.circular(5.0),
   );
 }
@@ -107,7 +102,6 @@ class AppTheme {
           alignment: Alignment.center,
           elevation: 2,
           shadowColor: Colors.black.withValues(alpha: 0.4),
-          // side: BorderSide(color: AppColors.black, width: 2),
           fixedSize: Size(244, 60),
           textStyle: TextStyle(
             fontSize: 15,

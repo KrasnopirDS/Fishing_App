@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fishing_app/styles/widget_style.dart';
 import 'package:fishing_app/screens/app_darwer.dart';
 import 'package:fishing_app/screens/new_catche.dart';
-import 'package:fishing_app/screens/catch_details_screen.dart'; // <--- Додайте цей рядок
+import 'package:fishing_app/screens/catch_details_screen.dart';
 
 class CatchesScreen extends StatelessWidget {
   final String fishingLogTitle;
@@ -59,7 +59,6 @@ class CatchesScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(8.0),
         children: [
-          // Обгортаємо CatchEntry у GestureDetector
           GestureDetector(
             onTap: () {
               showDialog(
@@ -70,8 +69,8 @@ class CatchesScreen extends StatelessWidget {
                     length: '15',
                     weight: '150',
                     bait: 'Worm',
-                    time: '1 may 2025\n7:20', // Передаємо дату і час
-                    note: 'Caught near the old oak tree. It was a sunny morning. The fish was quite active.', // Приклад нотатки
+                    time: '1 may 2025\n7:20',
+                    note: 'Caught near the old oak tree. It was a sunny morning. The fish was quite active.',
                   );
                 },
               );
@@ -94,7 +93,7 @@ class CatchesScreen extends StatelessWidget {
                     length: '19',
                     weight: '350',
                     bait: 'Spinner',
-                    time: '1 may 2025\n7:36', // Передаємо дату і час
+                    time: '1 may 2025\n7:36',
                     note: 'Fought hard, great catch! Used a small spinnerbait in the reeds.',
                   );
                 },
@@ -159,8 +158,7 @@ class CatchesScreen extends StatelessWidget {
   }
 }
 
-// CatchEntry тепер обгорнутий у GestureDetector у батьківському віджеті
-// Тому його власний GestureDetector більше не потрібен тут.
+
 class CatchEntry extends StatelessWidget {
   final String species;
   final String weight;
@@ -229,7 +227,6 @@ class CatchEntry extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.edit, color: WidgetStyles.blackColor),
             onPressed: () {
-              // Handle edit button press
             },
           ),
         ],

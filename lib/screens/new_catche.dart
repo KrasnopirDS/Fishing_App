@@ -6,15 +6,15 @@ class NewCatche extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card( // Використовуємо Card для вигляду картки
+    return Card(
       margin: EdgeInsets.zero,
-      color: ColorsPalette.lightGreen, // Колір картки з ваших стилів
+      color: ColorsPalette.lightGreen,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0), // Закруглюємо кути
+        borderRadius: BorderRadius.circular(20.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15.0), // Зменшено загальний відступ
-        child: SingleChildScrollView( // Залишаємо SingleChildScrollView на випадок, якщо на маленьких екранах все ж знадобиться прокрутка
+        padding: const EdgeInsets.all(15.0),
+        child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,34 +23,34 @@ class NewCatche extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.close, color: ColorsPalette.blackGreen, size: 36), // Зменшено розмір іконки
+                    icon: const Icon(Icons.close, color: ColorsPalette.blackGreen, size: 36),
                     onPressed: () {
-                      Navigator.of(context).pop(); // Закриває діалог
+                      Navigator.of(context).pop();
                     },
                   ),
                   const Text(
                     'New Catche',
                     style: TextStyle(
                       color: ColorsPalette.blackGreen,
-                      fontSize: 20, // Зменшено розмір шрифту заголовка
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(width: 24), // Для вирівнювання з кнопкою "X"
+                  SizedBox(width: 24),
                 ],
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
               // Catch name input
               const Text(
                 'Catch name',
                 style: TextStyle(
-                  fontSize: 14, // Зменшено розмір шрифту
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorsPalette.blackGreen,
                 ),
               ),
-              const SizedBox(height: 5), // Зменшено відступ
+              const SizedBox(height: 5),
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter catch name',
@@ -59,23 +59,23 @@ class NewCatche extends StatelessWidget {
                   border: AppTheme.inputBorder,
                   enabledBorder: AppTheme.inputBorder,
                   focusedBorder: AppTheme.inputBorder,
-                  isDense: true, // Зменшує внутрішні відступи поля вводу
-                  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10), // Зменшено внутрішній відступ
+                  isDense: true,
+                  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 ),
-                style: TextStyle(fontSize: 14), // Зменшено розмір тексту в полі вводу
+                style: TextStyle(fontSize: 14),
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
               // Catch length input
               const Text(
                 'Catch length',
                 style: TextStyle(
-                  fontSize: 14, // Зменшено розмір шрифту
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorsPalette.blackGreen,
                 ),
               ),
-              const SizedBox(height: 5), // Зменшено відступ
+              const SizedBox(height: 5),
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter catch length',
@@ -89,18 +89,18 @@ class NewCatche extends StatelessWidget {
                 ),
                 style: TextStyle(fontSize: 14),
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
               // Catch weight input
               const Text(
                 'Catch weight',
                 style: TextStyle(
-                  fontSize: 14, // Зменшено розмір шрифту
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorsPalette.blackGreen,
                 ),
               ),
-              const SizedBox(height: 5), // Зменшено відступ
+              const SizedBox(height: 5),
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter catch weight',
@@ -114,18 +114,18 @@ class NewCatche extends StatelessWidget {
                 ),
                 style: TextStyle(fontSize: 14),
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
               // Bait input
               const Text(
                 'Bait',
                 style: TextStyle(
-                  fontSize: 14, // Зменшено розмір шрифту
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorsPalette.blackGreen,
                 ),
               ),
-              const SizedBox(height: 5), // Зменшено відступ
+              const SizedBox(height: 5),
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter bait',
@@ -139,18 +139,17 @@ class NewCatche extends StatelessWidget {
                 ),
                 style: TextStyle(fontSize: 14),
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
-              // Add note input
               const Text(
                 'Add note',
                 style: TextStyle(
-                  fontSize: 14, // Зменшено розмір шрифту
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorsPalette.blackGreen,
                 ),
               ),
-              const SizedBox(height: 5), // Зменшено відступ
+              const SizedBox(height: 5),
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter add note',
@@ -163,9 +162,9 @@ class NewCatche extends StatelessWidget {
                   contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 ),
                 style: TextStyle(fontSize: 14),
-                maxLines: 2, // Дозволити кілька рядків для нотаток
+                maxLines: 2,
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
               // Add photos (camera icon)
               Row(
@@ -174,69 +173,68 @@ class NewCatche extends StatelessWidget {
                   const Text(
                     'Add photos',
                     style: TextStyle(
-                      fontSize: 14, // Зменшено розмір шрифту
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: ColorsPalette.blackGreen,
                     ),
                   ),
                   Container(
-                    width: 40, // Зменшено розмір контейнера
-                    height: 40, // Зменшено розмір контейнера
+                    width: 40,
+                    height: 40,
                     decoration: BoxDecoration(
                       color: ColorsPalette.basicGreen,
-                      borderRadius: BorderRadius.circular(8.0), // Зменшено радіус
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: IconButton(
-                      icon: const Icon(Icons.camera_alt, color: ColorsPalette.blackGreen, size: 24), // Зменшено розмір іконки
+                      icon: const Icon(Icons.camera_alt, color: ColorsPalette.blackGreen, size: 24),
                       onPressed: () {
-                        // Логіка для додавання фотографій
+
                       },
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 15), // Зменшено відступ
+              const SizedBox(height: 15),
 
-              // Date and time
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
                     'Data and time',
                     style: TextStyle(
-                      fontSize: 14, // Зменшено розмір шрифту
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: ColorsPalette.blackGreen,
                     ),
                   ),
                   Container(
-                    width: 40, // Зменшено розмір контейнера
-                    height: 40, // Зменшено розмір контейнера
+                    width: 40,
+                    height: 40,
                     decoration: BoxDecoration(
                       color: ColorsPalette.basicGreen,
-                      borderRadius: BorderRadius.circular(8.0), // Зменшено радіус
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: IconButton(
-                      icon: const Icon(Icons.calendar_today, color: ColorsPalette.blackGreen, size: 24), // Зменшено розмір іконки
+                      icon: const Icon(Icons.calendar_today, color: ColorsPalette.blackGreen, size: 24),
                       onPressed: () {
-                        // Логіка для вибору дати та часу
                       },
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 30), // Зменшено відступ перед кнопкою збереження
+              const SizedBox(height: 30),
 
               // Save button (check mark)
               Align(
                 alignment: Alignment.centerRight,
                 child: FloatingActionButton(
                   onPressed: () {
-                    Navigator.of(context).pop(); // Закриває діалог
+                    Navigator.of(context).pop();
                   },
                   backgroundColor: WidgetStyles.mediumGreenEntry,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0), // Зменшено радіус FAB
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
                   child: const Icon(Icons.check, color: WidgetStyles.blackColor, size: 24),
                 ),

@@ -1,32 +1,31 @@
-// lib/screens/new_location_screen.dart
 import 'package:flutter/material.dart';
-import 'package:fishing_app/styles/widget_style.dart'; // Імпортуйте ваші стилі
+import 'package:fishing_app/styles/widget_style.dart';
 
 class NewLocation extends StatelessWidget {
   const NewLocation({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card( // <--- Використовуємо Card для вигляду картки
-      margin: EdgeInsets.zero, // Видаляємо зовнішні відступи, щоб Card заповнював Dialog
-      color: ColorsPalette.lightGreen, // Колір картки
-      shape: RoundedRectangleBorder( // Закруглюємо кути картки
+    return Card(
+      margin: EdgeInsets.zero,
+      color: ColorsPalette.lightGreen,
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.min, // Важливо для Dialog, щоб вміст не розтягувався на весь екран
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.close, color: ColorsPalette.blackGreen, size: 30), // Кнопка "X"
+                    icon: const Icon(Icons.close, color: ColorsPalette.blackGreen, size: 30),
                     onPressed: () {
-                      Navigator.of(context).pop(); // Закриває діалог
+                      Navigator.of(context).pop();
                     },
                   ),
                   const Text(
@@ -37,7 +36,7 @@ class NewLocation extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(width: 30), // Для вирівнювання з кнопкою "X"
+                  SizedBox(width: 30),
                 ],
               ),
               const SizedBox(height: 20),
@@ -108,7 +107,6 @@ class NewLocation extends StatelessWidget {
                     child: IconButton(
                       icon: const Icon(Icons.camera_alt, color: ColorsPalette.blackGreen, size: 30),
                       onPressed: () {
-                        // Логіка для додавання фотографій (можна залишити порожнім)
                       },
                     ),
                   ),
@@ -116,7 +114,6 @@ class NewLocation extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Date and time
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -139,7 +136,6 @@ class NewLocation extends StatelessWidget {
                 child: IconButton(
                   icon: const Icon(Icons.calendar_today, color: ColorsPalette.blackGreen, size: 30),
                   onPressed: () {
-                    // Логіка для вибору дати та часу (можна залишити порожнім)
                   },
                 ),
               ),
@@ -147,12 +143,11 @@ class NewLocation extends StatelessWidget {
               ),
               const SizedBox(height: 50),
 
-              // Save button (check mark)
               Align(
                 alignment: Alignment.centerRight,
                 child: FloatingActionButton(
                   onPressed: () {
-                    Navigator.of(context).pop(); // Закриває діалог
+                    Navigator.of(context).pop();
                   },
                   backgroundColor: WidgetStyles.mediumGreenEntry,
                   shape: RoundedRectangleBorder(
